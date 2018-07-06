@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dart</string>
+    <string name="title_dart">Dart</string>
+    <string name="title_board">Board</string>
+    <string name="title_profile">Profile</string>
+    <string name="edit_prof_text">EDIT YOUR PROFILE</string>
+</resources>
