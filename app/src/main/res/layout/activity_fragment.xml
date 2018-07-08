@@ -62,6 +62,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resume" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="0">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"></View>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/whitish"
+            android:fontFamily="@font/arca_majora3_heavy"
+            android:text="SAVE"
+            android:textColor="@color/darkGray"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="161dp" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -299,28 +324,5 @@
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="0">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="9"></View>
-        <Button
-            android:id="@+id/save"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="SAVE"
-            android:fontFamily="@font/arca_majora3_heavy"
-            android:textSize="30sp"
-            android:textColor="@color/darkGray"
-            android:background="@color/whitish"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteX="161dp"
-            android:layout_weight="1"/>
-    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
