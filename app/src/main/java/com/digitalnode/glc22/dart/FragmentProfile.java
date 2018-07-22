@@ -3,8 +3,10 @@ package com.digitalnode.glc22.dart;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
+import android.provider.OpenableColumns;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.os.Bundle;
@@ -14,6 +16,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -31,6 +35,7 @@ public class FragmentProfile extends Fragment {
     private Button resButton;
     private int REQUEST_CODE_DOC = 111;
     private StorageReference mStorageRef;
+    private EditText website;
     Uri file;
 
     @Nullable
@@ -93,21 +98,27 @@ public class FragmentProfile extends Fragment {
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, final int resultCode, Intent data) {
         // Check which request we're responding to
         if (requestCode == REQUEST_CODE_DOC && resultCode == RESULT_OK && data != null && data.getData() != null) {
             file = data.getData();
 
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-/*
-            StorageReference resume = mStorageRef.child("resumes/" + user.getDisplayName() + "/");
+
+            StorageReference resume = mStorageRef.child("resumes/Millennium");
+
+            final String name = getFileName(file);
 
             resume.putFile(file)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             // Get a URL to the uploaded content
-                            Uri downloadUrl = taskSnapshot.getDownloadUrl();
+                            //Uri downloadUrl = taskSnapshot.getDownloadUrl();
+
+                            resButton.setBackground(getResources().getDrawable(R.drawable.red_solid));
+                            resButton.setText("'" + name + "'");
+                            resButton.setTextColor(getResources().getColor(R.color.darkGray));
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -115,9 +126,22 @@ public class FragmentProfile extends Fragment {
                         public void onFailure(@NonNull Exception exception) {
                             // Handle unsuccessful uploads
                             // ...
+                            Toast.makeText(getActivity(), "Resume Upload Failed", Toast.LENGTH_SHORT).show();
                         }
-                    }); */
+                    });
+
 
         }
+    }
+
+    public String getFileName(Uri uri) {
+        String filePath = uri.getPath();
+        String filename = filePath.substring((filePath.lastIndexOf("/") + 1), filePath.length());
+        return filename;
+    }
+
+    public void save(View view)
+    {
+
     }
 }

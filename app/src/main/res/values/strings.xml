@@ -4,4 +4,11 @@
     <string name="title_board">Board</string>
     <string name="title_profile">Profile</string>
     <string name="edit_prof_text">EDIT YOUR PROFILE</string>
+    <string name="example_bio"><i>Hey, my name's Jared, I love long walks on the beach, running through forests, and killing myself. My specialties include suicide, murder suicide, and grand theft.</i></string>
+    <string name="sign_out">Sign Out</string>
+    <string name="email_add">Email Address</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
 </resources>

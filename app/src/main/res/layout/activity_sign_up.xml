@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGray"
+    tools:context="com.digitalnode.glc22.dart.SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.408">
+
+        <EditText
+            android:id="@+id/emailAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_white_outline"
+            android:ems="10"
+            android:fontFamily="@font/arca_majora3_heavy"
+            android:gravity="center"
+            android:hint="@string/email_add"
+            android:inputType="textPersonName"
+            android:textColor="@color/whitish"
+            android:textColorHint="@color/whitish"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="169dp" />
+
+        <EditText
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/whitish"
+            android:textColorHint="@color/whitish"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/round_white_outline"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/username"
+            android:fontFamily="@font/arca_majora3_heavy"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="252dp" />
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_white_outline"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColor="@color/whitish"
+            android:textColorHint="@color/whitish"
+            android:textSize="14sp"
+            android:fontFamily="@font/arca_majora3_heavy"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="319dp" />
+
+        <EditText
+            android:id="@+id/passConf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_white_outline"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:textColor="@color/whitish"
+            android:textColorHint="@color/whitish"
+            android:textSize="14sp"
+            android:fontFamily="@font/arca_majora3_heavy"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="319dp" />
+
+        <Button
+            android:id="@+id/sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_red_select"
+            android:text="@string/sign_up"
+            android:textColor="@color/veryred"
+            android:textSize="20sp"
+            android:onClick="createNewUser"
+            android:fontFamily="@font/arca_majora3_heavy"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="395dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

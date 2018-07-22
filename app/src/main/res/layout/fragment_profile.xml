@@ -34,7 +34,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/red_outline"
+        android:background="@drawable/red_outline_solid_gray_select"
         android:fontFamily="@font/arca_majora3_bold"
         android:text="UPLOAD YOUR RESUME"
         android:textSize="14sp"
@@ -48,6 +48,7 @@
         android:id="@+id/open_bio"
         android:layout_width="match_parent"
         android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -55,8 +56,9 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/red_solid"
         android:fontFamily="@font/arca_majora3_bold"
-        android:text="EDIT YOUR BIO"
+        android:text="EDIT YOUR BIO + AVATAR"
         android:textColor="@color/black_red_text"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,59 +83,23 @@
             android:background="@color/whitish"
             android:fontFamily="@font/arca_majora3_heavy"
             android:text="SAVE"
-            android:textColor="@color/darkGray"
+            android:textColor="@color/black_white_text"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:layout_editor_absoluteX="161dp" />
     </LinearLayout>
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="192dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:id="@+id/lay_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="196dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:paddingTop="7dp"
-                android:weightSum="12"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="2"
-                    android:src="@drawable/at_symbol"
-                    android:tint="@color/veryred" />
-
-                <EditText
-                    android:id="@+id/email"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="10"
-                    android:background="@drawable/white_outline"
-                    android:fontFamily="@font/arca_majora3_bold"
-                    android:gravity="center"
-                    android:hint="EMAIL ADDRESS"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/whitish"
-                    android:textColorHint="@color/whitish" />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/lay_link"
@@ -148,8 +114,7 @@
                 android:weightSum="12"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lay_email">
+                app:layout_constraintStart_toStartOf="parent">
 
                 <ImageView
                     android:layout_width="0dp"
@@ -163,12 +128,12 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="10"
-                    android:textColor="@color/whitish"
-                    android:textColorHint="@color/whitish"
-                    android:hint="WEBSITE ADDRESS"
+                    android:background="@drawable/white_outline"
                     android:fontFamily="@font/arca_majora3_bold"
                     android:gravity="center"
-                    android:background="@drawable/white_outline" />
+                    android:hint="WEBSITE ADDRESS"
+                    android:textColor="@color/whitish"
+                    android:textColorHint="@color/whitish" />
 
             </LinearLayout>
 
